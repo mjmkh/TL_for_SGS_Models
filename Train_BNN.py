@@ -94,7 +94,7 @@ def build_model(conv_depth, kernel_size, hidden_size, n_hidden_layers, lr):
             layers.Convolution2D(1, kernel_size, padding='same', activation=None)
             ]
             )
-    optimizer= keras.optimizers.Adam(lr=lr)
+    optimizer= tf.optimizers.Adam(lr=lr)
 
 
     model.compile(loss='mean_squared_error', optimizer = optimizer)
